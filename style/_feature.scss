@@ -1,0 +1,64 @@
+.feature {
+	background-color: $lightGrayishBlue;
+	text-align: center;
+
+	&__intro {
+		margin-bottom: 3.75rem;
+	}
+
+	&__item {
+		padding: 0.9375rem;
+	}
+
+	&__icon {
+		margin-bottom: 1.875rem;
+	}
+
+	&__title {
+		font-size: 1.25rem;
+		font-weight: 300;
+		color: $darkBlue;
+		line-height: 1.15;
+		margin-bottom: 1.5rem;
+	}
+
+	&__description {
+		font-size: 1rem;
+		line-height: 1.5;
+	}
+
+	// Media Queries
+
+	@media (min-width: $breakpoint-up-md) {
+
+		&__grid {
+			display: flex;
+			flex-wrap: wrap;
+		}
+
+		&__item {
+			flex: 50%;
+		}
+	}
+
+	@media (min-width: $breakpoint-up-lg) {
+
+		text-align: left;
+
+		&__intro {
+			width: 60%;
+		}
+
+		&__item {
+			flex: 1;
+		}
+
+		&__title {
+			font-size: 1.5rem;
+		}
+
+		&__description {
+			font-size: 0.875rem;
+		}
+	}
+}

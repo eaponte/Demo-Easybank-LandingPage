@@ -1,0 +1,141 @@
+.footer {
+	background-color: $darkBlue;
+	color: $white;
+	padding: 2.5rem;
+	text-align: center;
+
+	&__logo {
+		display: inline-block;
+		margin-bottom: 1.875rem;
+	}
+
+	&__social {
+		margin-bottom: 1.875rem;
+
+		a {
+			display: inline-block;
+
+			svg path {
+				transition: fill 200ms ease-in-out;
+			}
+
+			&:hover {
+	
+				svg path {
+					fill: $limeGreen;
+				}
+			}
+		}
+
+		a:not(:last-child) {
+			margin-right: 1rem;
+		}
+	}
+
+	&__links {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		font-size: 0.9375rem;
+
+		&.col2 {
+			margin-bottom: 1.875rem;
+		}
+
+		a {
+			line-height: 2.25;
+			color: $lightGrayishBlue;
+			transition: color 200ms ease-in-out;
+
+			&:hover {
+				color: $limeGreen;
+			}
+		}
+	}
+
+	&__cta {
+		margin-bottom: 1.875rem;
+
+		.button::before {
+			position: absolute;
+			content: "";
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			background-color: rgba(255, 255, 255, 0.25);
+			opacity: 0;
+			border-radius: 2rem;
+			transition: opacity 200ms ease-in-out;
+		}
+
+		.button:hover {
+			opacity: unset;
+		}
+
+		.button:hover::before {
+				opacity: 1;
+		}
+	}
+
+	&__copyright {
+		font-size: 0.9375rem;
+		color: $grayishBlue;
+	}
+
+	// Media Queries
+
+	@media (min-width: $breakpoint-up-lg) {
+		text-align: left;
+
+		.container {
+			display: grid;
+			grid-template-columns: 2fr 1fr 1fr 3fr;
+			grid-template-rows: 1fr auto;
+			grid-template-areas: 
+				"logo links1 links2 cta"
+				"social links1 links2 copyright";
+			justify-items: start;
+			gap: 1rem;
+		}
+
+		&__links {
+			align-items: start;
+			justify-content: space-between;
+
+			&.col1 {
+				grid-area: links1;
+			}
+	
+			&.col2 {
+				grid-area: links2;
+				margin-bottom: 0;
+			}
+		}
+
+		&__logo {
+			grid-area: logo;
+			margin-bottom: 0;
+		}
+
+		&__social {
+			grid-area: social;
+			align-self: end;
+			margin-bottom: 0;
+		}
+
+		&__cta {
+			grid-area: cta;
+			justify-self: end;
+			margin-bottom: 0;
+		}
+
+		&__copyright {
+			grid-area: copyright;
+			justify-self: end;
+			align-self: end;
+		}
+		
+	}
+
+}

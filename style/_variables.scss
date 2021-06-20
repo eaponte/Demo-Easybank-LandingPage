@@ -1,0 +1,29 @@
+// Colors
+$darkBlue: hsl(233, 26%, 24%);
+$limeGreen: hsl(136, 65%, 51%);
+$brightCyan: hsl(192, 70%, 51%);
+$grayishBlue: hsl(233, 8%, 62%);
+$lightGrayishBlue: hsl(220, 16%, 96%);
+$veryLightGray: hsl(0, 0%, 98%);
+$white: hsl(0, 0%, 100%);
+$greenBlueGadient: linear-gradient(to right, $limeGreen, $brightCyan);
+
+// Font Sizes
+$font-sm: 0.875rem; // 14px
+$font-med: 1.125rem; // 18px
+$font-lg: 1.25rem; // 20px
+$font-xlg: 3.25rem; // 52px
+
+// Breakpoints
+
+// 90x16 = 1440px ex. - @media (min-width: 90em)
+$breakpoint-up-xlg: 90em;
+
+// 64x16 = 1024px ex. - @media (min-width: 64em)
+$breakpoint-up-lg: 64em;
+
+// 40x16 = 640px ex. - @media (min-width: 40em)
+$breakpoint-up-md: 40em;
+
+// 63.9375x16 = 1023px ex. - @media (max-width: 63.9375em)
+$breakpoint-down-md: 63.9375em;

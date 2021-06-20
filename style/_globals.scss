@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400&display=swap');
+
+html {
+	font-size: 100%; // lets user control zoom level in browser
+	box-sizing: border-box;
+}
+
+*, *::before, *::after {
+	box-sizing: inherit; // inherit setting from html tag
+}
+
+body {
+	margin: 3.8125rem 0 0 0;
+	padding: 0;
+	font-family: 'Public Sans', sans-serif;
+	font-size: $font-med;
+	line-height: 1.3;
+	color: $grayishBlue;
+
+	&.noscroll {
+		overflow: hidden;
+	}
+}
+
+// Text
+
+h1, h2, h3 {
+	font-weight: 300;
+	color: $darkBlue;
+	line-height: 1.15;
+	margin-top: 0;
+}
+
+h1 {
+	font-size: 2.3125rem;
+	margin-bottom: 1.5rem;
+}
+
+h2 {
+	font-size: 1.875rem;
+	margin-bottom: 1.5625rem;
+}
+
+p {
+	line-height: 1.5;
+	margin-bottom: 2.25rem;
+}
+
+a, a:visited, a:hover {
+	text-decoration: none;
+}
+
+// Spacing
+
+.container {
+	max-width: 69.375rem;
+	margin: 0 auto;
+
+	&--pall {
+		padding-top: 4.375rem;
+		padding-right: 1.5rem;
+		padding-bottom: 4.375rem;
+		padding-left: 1.5rem;
+	}
+}
+
+// Flexbox styles
+
+.flex {
+	display: flex;
+
+	&-jc-sp {
+		justify-content: space-between;
+	}
+
+	&-jc-c {
+		justify-content: center;
+	}
+
+	&-ai-c {
+		align-items: center;
+	}
+}
+
+// Buttons
+
+button, .button {
+	position: relative;
+	display: inline-block;
+	padding: 0.875rem 2.1875rem;
+	border: none;
+	border-radius: 2rem;
+	background: $greenBlueGadient;
+	font-weight: 400;
+	font-size: $font-sm;
+	color: $white;
+	transition: opacity 200ms ease-in-out;
+	cursor: pointer;
+
+	&:hover {
+		opacity: 0.75;
+	}
+}
+
+// Visibility
+
+.hide-for-mobile {
+	display: none;
+  }
+
+// Transitions - Fades
+
+.transition-all-mobile-menu {
+	transition: all 250ms ease-in-out;
+}
+
+// Media Queries
+
+// @media (max-width: $breakpoint-down-md) {
+// 	/* 63.9375x16 = 1023px */
+	
+// }
+  
+@media (min-width: $breakpoint-up-lg) {
+	/* 64x16 = 1024px */
+
+	body {
+		margin-top: 5rem;
+		font-size: $font-med;
+	}
+
+	h1 {
+		font-size: $font-xlg;
+	}
+
+	h2 {
+		font-size: 2.25rem;
+		margin-bottom: 2.25rem;
+	}
+
+	.container {
+	
+		&--pall {
+			padding-top: 5.625rem;
+			padding-bottom: 5.625rem;
+		}
+	}
+
+	.hide-for-desktop {
+		display: none;
+	}
+
+	.hide-for-mobile {
+		display: block;
+	}
+}
