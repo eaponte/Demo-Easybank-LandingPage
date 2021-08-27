@@ -2,6 +2,7 @@ const body = document.querySelector('body');
 const btnHamburger = document.getElementById('btnHamburger');
 const overlay = document.querySelector('.overlay');
 const mobileMenu = document.querySelector('.header__links');
+const mobileMenuLinks = document.querySelectorAll('.header__links a');
 
 openMenu = () => {
 	body.classList.add('noscroll');
@@ -22,4 +23,10 @@ closeMenu = () => {
 
 btnHamburger.addEventListener('click', () => {
 	btnHamburger.classList.contains('open') ? closeMenu() : openMenu();
+});
+
+mobileMenuLinks.forEach(link => {
+	link.addEventListener('click', () => {
+		closeMenu();
+	});
 });

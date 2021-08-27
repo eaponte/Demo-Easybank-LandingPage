@@ -3,6 +3,7 @@
 html {
 	font-size: 100%; // lets user control zoom level in browser
 	box-sizing: border-box;
+	scroll-behavior: smooth;
 }
 
 *, *::before, *::after {
